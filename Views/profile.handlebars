@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+</head>
+<body>
+    <div class="user-profile">
+        <div class="profile-header">
+            <img src="{{ profilePicture }}" alt="{{ username }}'s Profile Picture">
+            <h1>{{ username }}</h1>
+            <p>{{ age }} years old</p>
+            <p>{{ location }}</p>
+        </div>
+        
+        <div class="profile-details">
+            <h2>About Me</h2>
+            <p>{{ bio }}</p>
+        </div>
+        
+        <div class="profile-photos">
+            <h2>Photos</h2>
+            <ul>
+                {{#each photos}}
+                <li>
+                    <img src="{{ this }}" alt="Photo">
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        
+        <div class="profile-interests">
+            <h2>Interests</h2>
+            <ul>
+                {{#each interests}}
+                <li>{{ this }}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
