@@ -1,28 +1,43 @@
+const { Model, DataTypes } = require('sequelize');
+
 class UserProfile extends Model {}
 
-UserProfile.init({
-  user_id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    references: {
-      model: User,
-      key: 'id'
+UserProfile.init(
+  {
+    user_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      allowNull: false,
+      references: {
+        model: 'users',
+        key: 'id'
+      },
+      onDelete: 'CASCADE'
     },
-    onDelete: 'CASCADE'
+    name: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    sex: {
+      type: DataTypes.ENUM,
+      values: ['Male', 'Female', 'Other'],
+      allowNull: true
+    },
+    bio: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    }
   },
-  name: {
-    type: DataTypes.STRING
-  },
-  age: {
-    type: DataTypes.INTEGER
-  },
-  sex: {
-    type: DataTypes.ENUM('Male', 'Female', 'Other')
-  },
-  bio: {
-    type: DataTypes.TEXT
+  {
+    sequelize,
+    modelName: 'UserProfile',
+    tableName: 'user_profile',
+    timestamps: false 
   }
-}, {
-  sequelize,
-  modelName: 'userProfile'
-});
+);
+
+module.exports = UserProfile;
