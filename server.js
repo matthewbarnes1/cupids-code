@@ -30,6 +30,10 @@ sequelize.sync()
     res.render('login');
   });
 
+  app.get('/logout', (req, res) => {
+    res.render('logout');
+  });
+
   app.get('/profile-settings', (req, res) => {
     res.render('profile-settings');
   });
