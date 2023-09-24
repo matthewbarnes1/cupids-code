@@ -1,34 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registry</title>
-  <link rel="stylesheet" href="/public/reset.css">
+    <meta charset="UTF-8">
+    <title>Cupid's Code</title>
+    <!-- Add your CSS links and other head content here -->
 </head>
-
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      User Registry
-    </h1>
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
+    <header>
+        <!-- Navigation bar, user profile picture, and user information -->
+        <nav>
+            <!-- Add navigation links here -->
+        </nav>
+        <div class="user-profile">
+            <img src="{{ userProfilePicture }}" alt="{{ username }}'s Profile Picture">
+            <h1>{{ username }}</h1>
+            <p>{{ age }} years old</p>
+            <p>{{ location }}</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Main content sections -->
+        <section class="matches">
+    <h2>Your Matches</h2>
+    {{#if matches.length}}
+    <ul class="match-list">
+        {{#each matches}}
+        <li class="match">
+            <img src="{{ profilePicture }}" alt="{{ username }}'s Profile Picture">
+            <div class="match-info">
+                <h3>{{ username }}</h3>
+                <p>{{ age }} years old</p>
+                <p>{{ location }}</p>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <p>You don't have any matches yet.</p>
     {{/if}}
-  </header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
+</section>
 
-  {{#if logged_in}}
-  <script src="/server.js"></script>
-  {{/if}}
+       <section class="chat">
+    <h2>Chat Conversations</h2>
+    {{#if chatConversations.length}}
+    <ul class="conversation-list">
+        {{#each chatConversations}}
+        <li class="conversation">
+            <div class="conversation-info">
+                <h3>{{ partnerName }}</h3>
+                <!-- Add more conversation information as needed -->
+            </div>
+            <ul class="message-list">
+                {{#each messages}}
+                <li class="message">
+                    <span class="message-sender">{{ senderName }}:</span>
+                    <span class="message-text">{{ text }}</span>
+                    <span class="message-time">{{ time }}</span>
+                </li>
+                {{/each}}
+            </ul>
+            <div class="new-message">
+                <input type="text" class="message-input" placeholder="Type your message...">
+                <button class="send-button">Send</button>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <p>You don't have any chat conversations yet.</p>
+    {{/if}}
+</section>
+
+
+       <section class="profile-suggestions">
+    <h2>Profile Suggestions</h2>
+    {{#if profileSuggestions.length}}
+    <ul class="profile-suggestions-list">
+        {{#each profileSuggestions}}
+        <li class="profile-suggestion">
+            <img src="{{ profilePicture }}" alt="{{ username }}'s Profile Picture">
+            <div class="profile-info">
+                <h3>{{ username }}</h3>
+                <p>{{ age }} years old</p>
+                <p>{{ location }}</p>
+                <p class="interests">Interests: {{ interests }}</p>
+
+            </div>
+            <div class="interaction">
+                <button class="action-button">Send Message</button>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <p>No profile suggestions available at the moment.</p>
+    {{/if}}
+</section>
+
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+        <p>&copy; {{ currentYear }} Dating App</p>
+        <p>Developed and Created by M&N</p>
+    </footer>
+
+    <script src="/server.js"></script>
 </body>
-
 </html>
