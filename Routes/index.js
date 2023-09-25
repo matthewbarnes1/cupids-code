@@ -1,8 +1,15 @@
 //* Main homepage route
-const router = require('express').Router();
+const express = require('express');
+const app = express();
+const port = 3306;
 
-const userRoutes = require('./profile-routes');
+// Define a route for the main homepage
+app.get('/', (req, res) => {
+  // Your logic for rendering the main homepage here
+  res.send('<h1>Welcome to the Main Homepage</h1>');
+});
 
-router.use('/profile-routes', profileRoutes);
-
-module.exports = router;
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});

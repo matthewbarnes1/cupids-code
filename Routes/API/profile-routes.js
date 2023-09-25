@@ -1,6 +1,6 @@
 //*  Routes related to profile creation, editing, and viewing
 const router = require('express').Router();
-const { User } = require('../models');
+const { User } = require('/Views');
 
 // CREATE new user
 router.post('/', async (req, res) => {
