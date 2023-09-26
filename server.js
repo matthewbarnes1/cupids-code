@@ -1,55 +1,54 @@
-const express = require('express');
 const path = require('path');
-const { sequelize } = require('./Models');
+const express = require('express');
 const exphbs = require('express-handlebars');
-require('dotenv').config();
 
 const app = express();
-const PORT = 3001;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, './Public')));
+const PORT = process.env.PORT || 3000;
 
-// Set views to layouts directory since you want to directly render 'home.handlebars'
-app.set('views', path.join(__dirname, './Views/layouts'));
-
+// Handlebars configuration
 const hbs = exphbs.create({
-    defaultLayout: 'home',
+    defaultLayout: 'home', // Use 'home' as the default layout
     layoutsDir: path.join(__dirname, 'Views/layouts'),
-    partialsDir: path.join(__dirname, 'Views')
 });
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'Views'));
 
+// Static content
+app.use(express.static(path.join(__dirname, './Public')));
+
+// Routes
 app.get('/', (req, res) => {
     res.render('home');
 });
 
 app.get('/login', (req, res) => {
-    res.render('login', { layout: 'home' });
+    res.render('login');
 });
 
 app.get('/logout', (req, res) => {
-    res.render('logout', { layout: 'home' });
+    res.render('logout');
 });
 
 app.get('/profile-settings', (req, res) => {
-    res.render('profile-settings', { layout: 'home' });
+    res.render('profile-settings');
 });
 
 app.get('/profile', (req, res) => {
-    res.render('profile', { layout: 'home' });
+    res.render('profile');
 });
 
 app.get('/signup', (req, res) => {
-    res.render('signup', { layout: 'home' });
+    res.render('signup');
 });
 
 app.get('/user', (req, res) => {
-    res.render('user', { layout: 'home' });
+    res.render('user');
 });
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
