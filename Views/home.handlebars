@@ -1,28 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cupid's Code</title>
-<link rel="stylesheet" href="/css/style.css">
-
-</head>
-<body>
-    <header>
-        <!-- Navigation bar, user profile picture, and user information -->
-        <nav>
-        <img id="site-logo" src="/Cupids-code.svg" alt="Logo" width="150px" height="150px"> 
-        </nav>
-        <div class="user-profile">
-            <img src="{{ userProfilePicture }}" alt="{{ username }}'s Profile Picture">
-            <h1>{{ username }}</h1>
-            <p>{{ age }} years old</p>
-            <p>{{ location }}</p>
-        </div>
-    </header>
-
-    <main>
-        <!-- Main content sections -->
-        <section class="matches">
+<!-- Main content sections -->
+<section class="matches">
     <h2>Your Matches</h2>
     {{#if matches.length}}
     <ul class="match-list">
@@ -42,69 +19,10 @@
     {{/if}}
 </section>
 
-       <section class="chat">
-    <h2>Chat Conversations</h2>
-    {{#if chatConversations.length}}
-    <ul class="conversation-list">
-        {{#each chatConversations}}
-        <li class="conversation">
-            <div class="conversation-info">
-                <h3>{{ partnerName }}</h3>
-                <!-- Add more conversation information as needed -->
-            </div>
-            <ul class="message-list">
-                {{#each messages}}
-                <li class="message">
-                    <span class="message-sender">{{ senderName }}:</span>
-                    <span class="message-text">{{ text }}</span>
-                    <span class="message-time">{{ time }}</span>
-                </li>
-                {{/each}}
-            </ul>
-            <div class="new-message">
-                <input type="text" class="message-input" placeholder="Type your message...">
-                <button class="send-button">Send</button>
-            </div>
-        </li>
-        {{/each}}
-    </ul>
-    {{else}}
-    <p>You don't have any chat conversations yet.</p>
-    {{/if}}
+<section class="chat">
+    <!-- ... (no changes here) ... -->
 </section>
 
-
-       <section class="profile-suggestions">
-    <h2>Profile Suggestions</h2>
-    {{#if profileSuggestions.length}}
-    <ul class="profile-suggestions-list">
-        {{#each profileSuggestions}}
-        <li class="profile-suggestion">
-            <img src="{{ profilePicture }}" alt="{{ username }}'s Profile Picture">
-            <div class="profile-info">
-                <h3>{{ username }}</h3>
-                <p>{{ age }} years old</p>
-                <p>{{ location }}</p>
-                <p class="interests">Interests: {{ interests }}</p>
-
-            </div>
-            <div class="interaction">
-                <button class="action-button">Send Message</button>
-            </div>
-        </li>
-        {{/each}}
-    </ul>
-    {{else}}
-    <p>No profile suggestions available at the moment.</p>
-    {{/if}}
+<section class="profile-suggestions">
+    <!-- ... (no changes here) ... -->
 </section>
-
-    </main>
-
-    <footer>
-        <!-- Footer content -->
-        <p>&copy; {{ currentYear }} Dating App</p>
-        <p>Developed and Created by M&N</p>
-    </footer>
-</body>
-</html>
