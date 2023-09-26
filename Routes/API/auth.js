@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
   }
 });
 
-app.get('/login', (req, res) => {
+app.get('/Views/login', (req, res) => {
   res.send(`
     <h1>Login</h1>
     <form method="post" action="/login">
@@ -41,7 +41,7 @@ app.get('/login', (req, res) => {
   `);
 });
 
-app.post('/login', (req, res) => {
+app.post('/Views/login', (req, res) => {
   const { username, password } = req.body;
 
   // Authenticate the user (you would typically check against a database)
@@ -57,7 +57,7 @@ app.post('/login', (req, res) => {
   }
 });
 
-app.get('/logout', (req, res) => {
+app.get('/Views/logout', (req, res) => {
   // Clear the session data to log out the user
   req.session = null;
   res.redirect('/');
