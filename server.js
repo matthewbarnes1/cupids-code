@@ -3,21 +3,19 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 
 const app = express();
-
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
+app.use(express.static(path.join(__dirname, '/Public')));
 
 // Handlebars configuration
 const hbs = exphbs.create({
     defaultLayout: 'home', // Use 'home' as the default layout
-    layoutsDir: path.join(__dirname, 'Views/layouts'),
+    layoutsDir: path.join(__dirname, 'Views'),
 });
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'Views'));
 
-// Static content
-app.use(express.static(path.join(__dirname, './Public')));
 
 // Routes
 app.get('/', (req, res) => {

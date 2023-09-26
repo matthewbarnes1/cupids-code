@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 572.41 501.79">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-2 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-5 {
+        font-size: 36px;
+      }
+
+      .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill: #231f20;
+        font-family: SourceSansRoman-Regular, 'Source Sans Variable';
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-9 {
+        fill: #f15c5d;
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-10 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-6 {
+        font-size: 401.58px;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .cls-14 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        font-size: 220.05px;
+      }
+
+      .cls-8 {
+        font-size: 30.08px;
+      }
+    </style>
+  </defs>
+  <path class="cls-9" d="m424.61,247.06l-125.68,138.39-132.67-120.49c-130-118.07-4.32-256.45,125.68-138.39,108.99-120,241.66.49,132.67,120.49Z"/>
+  <text class="cls-8" transform="translate(122.9 447.62) scale(1.91 1)"><tspan class="cls-10" x="0" y="0">C</tspan><tspan x="16.76" y="0">UPID’S </tspan><tspan class="cls-12" x="109.17" y="0">C</tspan><tspan class="cls-13" x="125.48" y="0">ODE</tspan></text>
+  <text/>
+  <text class="cls-6" transform="translate(0 335.75)"><tspan x="0" y="0">{</tspan></text>
+  <text class="cls-6" transform="translate(571.23 116.89) rotate(-179.42)"><tspan x="0" y="0">{</tspan></text>
+  <text class="cls-7" transform="translate(128.27 370.64) scale(2.92 1)"><tspan x="0" y="0">_</tspan></text>
+  <text class="cls-5" transform="translate(157.42 491.42)"><tspan class="cls-3" x="0" y="0">E</tspan><tspan x="17.86" y="0">xp</tspan><tspan class="cls-1" x="53.89" y="0">r</tspan><tspan class="cls-14" x="66.02" y="0">ess </tspan><tspan class="cls-2" x="121.25" y="0">Y</tspan><tspan x="136.91" y="0">our </tspan><tspan class="cls-4" x="195.69" y="0">L</tspan><tspan class="cls-11" x="212.76" y="0">ov</tspan><tspan x="248.79" y="0">e</tspan></text>
+</svg>
