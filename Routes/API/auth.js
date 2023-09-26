@@ -3,7 +3,7 @@ const cookieSession = require('cookie-session');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 3306;
+const port = 3001;
 
 // Middleware setup
 app.use(bodyParser.urlencoded({ extended: false }));
