@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, './Public')));
 
 // Routes
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('layouts/home');
 });
 
 app.get('/login', (req, res) => {
