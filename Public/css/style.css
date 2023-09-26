@@ -1,0 +1,105 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header, main, footer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav {
+    float: left;
+}
+
+.user-profile {
+    float: right;
+    text-align: right;
+}
+
+.user-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Main Content Styles */
+.matches, .chat, .profile-suggestions {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.match-list, .conversation-list, .profile-suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.match, .conversation, .profile-suggestion {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.match img, .profile-suggestion img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.match-info, .conversation-info, .profile-info {
+    flex: 1;
+}
+
+.new-message {
+    margin-top: 20px;
+}
+
+.message-input {
+    width: 80%;
+    padding: 10px;
+}
+
+.send-button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.action-button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}

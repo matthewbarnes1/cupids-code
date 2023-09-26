@@ -9,7 +9,7 @@ const PORT = 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, './Public')));
 
 // Set views to layouts directory since you want to directly render 'home.handlebars'
 app.set('views', path.join(__dirname, './Views/layouts'));
