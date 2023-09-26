@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes, Model } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../Config/connection');
 
 sequelize.authenticate()
   .then(() => {
