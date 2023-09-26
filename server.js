@@ -2,50 +2,54 @@ const express = require('express');
 const path = require('path');
 const { sequelize } = require('./Models');
 const exphbs = require('express-handlebars');
-
+require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 
-const hbs = exphbs.create({ defaultLayout: 'main' });
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, './public')));
+
+// Set views to layouts directory since you want to directly render 'home.handlebars'
+app.set('views', path.join(__dirname, './Views/layouts'));
+
+const hbs = exphbs.create({
+    defaultLayout: 'home',
+    layoutsDir: path.join(__dirname, 'Views/layouts'),
+    partialsDir: path.join(__dirname, 'Views')
+});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, './views'));
 
+app.get('/', (req, res) => {
+    res.render('home');
+});
 
-sequelize.sync()
-  .then(() => {
-    console.log('Database & tables created!');
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+app.get('/login', (req, res) => {
+    res.render('login', { layout: 'home' });
+});
 
+app.get('/logout', (req, res) => {
+    res.render('logout', { layout: 'home' });
+});
 
-  app.get('/home', (req, res) => {
-    res.render('main');
-  });
+app.get('/profile-settings', (req, res) => {
+    res.render('profile-settings', { layout: 'home' });
+});
 
-  app.get('/login', (req, res) => {
-    res.render('login');
-  });
+app.get('/profile', (req, res) => {
+    res.render('profile', { layout: 'home' });
+});
 
-  app.get('/logout', (req, res) => {
-    res.render('logout');
-  });
+app.get('/signup', (req, res) => {
+    res.render('signup', { layout: 'home' });
+});
 
-  app.get('/profile-settings', (req, res) => {
-    res.render('profile-settings');
-  });
-
-  app.get('/profile', (req, res) => {
-    res.render('profile');
-  });
-
-  app.get('/signup', (req, res) => {
-    res.render('signup');
-  });
+app.get('/user', (req, res) => {
+    res.render('user', { layout: 'home' });
+});
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
