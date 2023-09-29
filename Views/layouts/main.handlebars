@@ -28,6 +28,10 @@
         {{{body}}} <!-- This placeholder will be replaced by the content of views like 'home.handlebars' -->
     </main>
 
+     {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
     <footer>
         <p>&copy; {{ currentYear }} Dating App</p>
         <p>Developed and Created by M&N</p>
