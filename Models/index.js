@@ -1,9 +1,13 @@
 const { Sequelize, DataTypes, Model } = require('sequelize');
+const sequelize = require('../Config/connection');
 
-const sequelize = new Sequelize('dating_db', 'root', 'Phrenology12!', {
-  host: 'localhost',
-  dialect: 'mysql'
-});
+sequelize.authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
 
 class User extends Model {}
 User.init(

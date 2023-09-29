@@ -1,0 +1,28 @@
+<!-- Main content sections -->
+<section class="matches">
+    <h2>Your Matches</h2>
+    {{#if matches.length}}
+    <ul class="match-list">
+        {{#each matches}}
+        <li class="match">
+            <img src="{{ profilePicture }}" alt="{{ username }}'s Profile Picture">
+            <div class="match-info">
+                <h3>{{ username }}</h3>
+                <p>{{ age }} years old</p>
+                <p>{{ location }}</p>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <p>You don't have any matches yet.</p>
+    {{/if}}
+</section>
+
+<section class="chat">
+    <!-- ... (no changes here) ... -->
+</section>
+
+<section class="profile-suggestions">
+    <!-- ... (no changes here) ... -->
+</section>
