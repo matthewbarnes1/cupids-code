@@ -1,42 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>User Profile</title>
-</head>
-<body>
-    <div class="user-profile">
-        <div class="profile-header">
-            <img src="{{ profilePicture }}" alt="{{ username }}'s Profile Picture">
-            <h1>{{ username }}</h1>
-            <p>{{ age }} years old</p>
-            <p>{{ location }}</p>
-        </div>
-        
-        <div class="profile-details">
-            <h2>About Me</h2>
-            <p>{{ bio }}</p>
-        </div>
-        
-        <div class="profile-photos">
-            <h2>Photos</h2>
-            <ul>
-                {{#each photos}}
-                <li>
-                    <img src="{{ this }}" alt="Photo">
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-        
-        <div class="profile-interests">
-            <h2>Interests</h2>
-            <ul>
-                {{#each interests}}
-                <li>{{ this }}</li>
-                {{/each}}
-            </ul>
-        </div>
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Project:</h3>
+
+    <form class="form new-project-form">
+      <div class="form-group">
+        <label for="project-name">project name:</label>
+        <input class="form-input" type="text" id="project-name" name="project-name" />
+      </div>
+      <div class="form-group">
+        <label for="project-funding">needed funding ($):</label>
+        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+      </div>
+      <div class="form-group">
+        <label for="project-desc">description:</label>
+        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if projects.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Projects:</h3>
+
+    {{#each projects as |project|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+      </div>
     </div>
-</body>
-</html>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
