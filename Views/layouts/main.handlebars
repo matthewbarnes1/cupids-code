@@ -100,12 +100,9 @@
 
     </main>
 
-    <footer>
-        <!-- Footer content -->
-        <p>&copy; {{ currentYear }} Dating App</p>
-        <p>Developed and Created by M&N</p>
-    </footer>
+     {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 
-    <script src="/server.js"></script>
 </body>
 </html>
