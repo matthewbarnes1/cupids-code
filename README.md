@@ -13,7 +13,7 @@
 - Open to all individuals, although specifically tailored for computer scientists and coders!
 # Usage
 - **We are still in developmental phase**
-- To use this app, go to (heroku link here)
+- Visit the deployed site [here](https://cupids-code-17d10dc3c045.herokuapp.com/)!
 - If you are interested in contributing, head to [Contribution](#Contribution)
 
 # Tech-Stack 
