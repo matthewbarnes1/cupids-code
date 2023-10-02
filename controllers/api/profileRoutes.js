@@ -8,7 +8,7 @@ router.post('/create', withAuth, async (req, res) => {
   try {
     
     console.log(req.body)
-    console.log('profile is being acsses')
+    console.log('profile is being accessed')
     
     const newProfile = await Profile.create({name: req.body.firstname, 
       bio:req.body.bio,
