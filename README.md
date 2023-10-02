@@ -28,6 +28,7 @@
 - Filter selector for matches page (view by age-range, similar hobbies, preferred sex, etc.)
 - Image upload modal + db storage for user profile
 - P2P chat to connect with your matches directly on our site
+- Better login/profile routing across the site with navbar.
 
 # Contribution
 - We welcome any help with this project
