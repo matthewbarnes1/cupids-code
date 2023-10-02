@@ -1,5 +1,5 @@
 const Profile = require('./Profile');
-const User = require('./User');
+const User = require('./user');
 
 User.hasOne(Profile, {
   foreignKey: 'user_id',
