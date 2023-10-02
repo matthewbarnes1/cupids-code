@@ -9,7 +9,8 @@
 
 # Description
 - Cupids-Code is a web-based dating site 
-- 
+- Connect with link-minded individuals, view your 'matches', and more! 
+- Open to all individuals, although specifically tailored for computer scientists and coders!
 # Usage
 - **We are still in developmental phase**
 - To use this app, go to (heroku link here)
