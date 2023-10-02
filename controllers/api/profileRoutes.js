@@ -33,8 +33,6 @@ router.post('/update', withAuth, async (req, res) => {
     console.log(req.body)
     console.log('update is being done')
 
-    //UPDATE profile INNER JOIN user ON user.id = profile.user_id SET profile.name='new name', profile.bio='new bio', profile.age=30, profile.hobbies='new hobbies'  WHERE USER.id=21
-
     let sqlQuary = `UPDATE profile INNER JOIN user ON user.id = profile.user_id SET profile.name='${req.body.firstname}', profile.bio='${req.body.bio}', profile.age=${req.body.age}, profile.hobbies='${req.body.hobbies}' WHERE USER.id=${req.session.user_id}`
     
     const [results, metadata] = await sequelize.query(sqlQuary);
