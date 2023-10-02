@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{profileInfo.[0].firstname}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Edit profile:</h3>
+
+    <form class="form new-project-form">
+      <div class="form-group">
+        <label for="project-name">First Name</label>
+        <input class="form-input" type="text" id="first-name" name="project-name" value="{{profileInfo.[0].name}}" />
+      </div>
+      <div class="form-group">
+        <label for="project-funding">Age</label>
+        <input class="form-input" type="number" id="age" name="project-funding" min="18" max="100" value="{{profileInfo.[0].age}}" />
+      </div>
+      <div class="form-group">
+        <label for="project-desc">Bio</label>
+        <textarea class="form-input" id="profile-bio" name="project-desc" maxlength="500">{{profileInfo.[0].bio}}</textarea>
+      </div>
+       <div class="form-group">
+        <label for="project-desc">Hobbies and Interest</label>
+        <textarea class="form-input" id="profile-hobbies" name="project-desc">{{profileInfo.[0].hobbies}}</textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Edit</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<script src="./js/profileEdit.js"></script>

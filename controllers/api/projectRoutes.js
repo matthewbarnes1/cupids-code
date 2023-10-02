@@ -9,6 +9,8 @@ router.post('/', withAuth, async (req, res) => {
       user_id: req.session.user_id,
     });
 
+    // res.json(...req.body)
+
     res.status(200).json(newProject);
   } catch (err) {
     res.status(400).json(err);

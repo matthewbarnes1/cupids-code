@@ -14,13 +14,14 @@
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
         <span role="img" aria-label="money"></span>
-        <a href="/"> <img src="/public/images/cupids-code.png" height="200px" width="200px"></img></a>
+        <a href="/"> <img src="/public/images/cupids-code.png" height="100px" width="100px"></img></a>
        
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">profile</a> |
+        <a href="/matches">Matches</a>
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>

@@ -5,30 +5,19 @@ const newFormHandler = async (event) => {
   const age = document.querySelector('#age').value.trim();
   const bio = document.querySelector('#profile-bio').value.trim();
   const hobbies = document.querySelector('#profile-hobbies').value.trim();
-  console.log('Submit form')
 
-
-  if(firstname && age && bio){
-    console.log('true')
-  }else{
-    console.log('false')
-  }
-  
   if (firstname && age && bio) {
-    const response = await fetch(`/api/profile/create`, {
+    const response = await fetch(`/api/profile/update`, {
       method: 'POST',
       body: JSON.stringify({ firstname, age, bio, hobbies}),
       headers: {
         'Content-Type': 'application/json',
       },
     });
-
-
-    document.location.replace('/matches');
-  
+    
 
     if (response.ok) {
-      document.location.replace('/login');
+      document.location.replace('/matches');
     } else {
       alert('Failed to create project');
     }
@@ -51,11 +40,7 @@ const delButtonHandler = async (event) => {
   }
 };
 
-
-
 document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
-
-console.log('zxvzxcvzxcvzxcvzxcv')
 
