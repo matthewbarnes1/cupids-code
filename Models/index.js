@@ -1,5 +1,4 @@
 const Profile = require('./Profile');
-const sequelize = require('../config/connection.js');
 const User = require('./User');
 
 User.hasOne(Profile, {
