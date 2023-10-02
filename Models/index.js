@@ -1,5 +1,7 @@
 const User = require('./user');
 const Profile = require('./Profile')
+const sequelize = require('../config/connection.js');
+
 
 User.hasOne(Profile, {
   foreignKey: 'user_id',
