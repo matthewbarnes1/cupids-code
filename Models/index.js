@@ -1,7 +1,6 @@
-const User = require('./user');
-const Profile = require('./Profile')
+const Profile = require('./Profile');
 const sequelize = require('../config/connection.js');
-
+const User = require('./User');
 
 User.hasOne(Profile, {
   foreignKey: 'user_id',
@@ -11,7 +10,5 @@ User.hasOne(Profile, {
 Profile.belongsTo(User, {
   foreignKey: 'user_id'
 });
-
-
 
 module.exports = { User, Profile};
