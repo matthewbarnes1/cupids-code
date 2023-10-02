@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{profileInfo.[0].firstname}}!</h2>
+    <h2>Welcome, {{profileInfo.[0].name}}!</h2>
   </div>
 </div>
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Edit profile:</h3>
+    <h3>Edit your profile!</h3>
 
     <form class="form new-project-form">
       <div class="form-group">
@@ -26,7 +26,7 @@
         <textarea class="form-input" id="profile-hobbies" name="project-desc">{{profileInfo.[0].hobbies}}</textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Edit</button>
+        <button type="submit" class="btn btn-primary">Save</button>
       </div>
     </form>
   </div>

@@ -91,9 +91,9 @@ body {
   width: 100%;
   padding: 0.75rem;
   margin: 0.5rem 0;
-  border: 1px solid #e0e0e0;
+  /* border: 1px solid #e0e0e0; */
   font-size: 1rem;
-  border-radius: 15px; /* Rounded corners for inputs */
+  /* border-radius: 15px; Rounded corners for inputs */
 }
 
 header {
@@ -176,7 +176,7 @@ div {
 .profile-form {
   background-color: #f8f1f4; /* Soft pinkish background */
   padding: 1.5rem;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   margin: 1rem 0;
 }
 
@@ -194,7 +194,7 @@ div {
   width: 100%;
   padding: 0.75rem;
   margin: 0.5rem 0;
-  border: 1px solid #e0e0e0;
+  /* border: 1px solid #e0e0e0; */
   font-size: 1rem;
   border-radius: 10px; /* Rounded but not too bubbly */
 }
