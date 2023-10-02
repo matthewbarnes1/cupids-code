@@ -24,6 +24,7 @@
 - Bcrypt - Password hashing
 
 # Future Development
+**There is alot of opportunity for the future development of this app.. Some ideas include:**
 - Filter selector for matches page (view by age-range, similar hobbies, preferred sex, etc.)
 - Image upload modal + db storage for user profile
 - P2P chat to connect with your matches directly on our site
